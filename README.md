@@ -26,3 +26,5 @@ grep -Ev '([abfhijkquvwxyABFHIJKQUVWXY])\1{1}'
 
 Remove lines with 3 consecutive consonants which rarely appear in 3s. 'S' has been removed as it often appears in doubles before or after another consonant ('PASSWORD'), or alone near pairs of consonants ('Jumpshot'), as well as the letter 'k' as a middle letter (for words like Jackpot, Corckscrew): 
 grep -vE '[bcdfghjklmnpqrtvwxzBCDFGHJKLMNPQRTVWXZ][bcdfghjlmnpqrtvwxzBCDFGHJLMNPQRTVWXZ][bcdfghjklmnpqrtvwxzBCDFGHJKLMNPQRTVWXZ]'
+
+Remove lines with 4 consecutive consonants which rarely appear in 4s.('s' and 'k' removed from 2nd group (words like corkscrew): grep -vE '[bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ][bcdfghjlmnpqrtvwxzBCDFGHJLMNPQRTVWXZ][bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ][bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ]' | wc -l
