@@ -24,5 +24,5 @@ grep -Ev "(.)(.*\1){2,}"
 Remove lines with duplicate characters that are rare to see as duplicate characters: : 
 grep -Ev '([abfhijkquvwxyABFHIJKQUVWXY])\1{1}'
 
-Remove lines with 3 consecutive letters that rarely appear in 3s: 
+Remove lines with 3 consecutive consonants which rarely appear in 3s. 'S' has been removed as it often appears in doubles before or after another consonant ('PASSWORD'), or alone near pairs of consonants ('Jumpshot'), as well as the letter 'k' as a middle letter (for words like Jackpot, Corckscrew): 
 grep -vE '[bcdfghjklmnpqrtvwxzBCDFGHJKLMNPQRTVWXZ][bcdfghjlmnpqrtvwxzBCDFGHJLMNPQRTVWXZ][bcdfghjklmnpqrtvwxzBCDFGHJKLMNPQRTVWXZ]'
