@@ -1,4 +1,4 @@
-# natural_bruteforce_wordlists
+# natural bruteforce wordlists
 
 Randomly generated character sequences for mask attacks generate many words that are unlikely to be natural words based on the sequence of letters. This is an attempt to shorten these word lists by matching these types of sequences and removing them with tools lie grep.
 
